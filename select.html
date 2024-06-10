@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="select.css">
+</head>
+<body>
+    <div class="header">
+        <div class="top-nav">
+            <div id="Title">
+                <h1 id="Name">Damien LECOQ</h1>
+                <h1 id="Portfolio">Portfolio</h1>
+            </div>
+            <ul>
+                <li><a href="lobby.html">ACCEUIL</a></li>
+                <li><a href="select.html">PROJETS</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">PLUS SUR MOI</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="blur">
+        <div class="filter_buttons">
+            <div class="case">
+                <button id="toutFilter" class="active" data-name="all"></button>
+                <p class="def">Tout les filtres</p>
+            </div>
+            <div class="case">
+                <button id="soloFilter" data-name="solo"></button>
+                <p class="def">Individuel</p>
+            </div>
+            <div class="case">
+                <button id="teamFilter" data-name="team"></button>
+                <p class="def">En Equipe</p>
+            </div>
+            <div class="case">
+                <button id="javaFilter" data-name="java"></button>
+                <p class="def">Java</p>
+            </div>
+            <div class="case">
+                <button id="bashFilter" data-name="bash"></button>
+                <p class="def">Bash</p>
+            </div>
+            <div class="case">
+                <button id="verseFilter" data-name="verse"></button>
+                <p class="def">VERSE</p>
+            </div>
+            <div class="case">
+                <button id="uefnFilter" data-name="uefn"></button>
+                <p class="def">Unreal Engine</p>
+            </div>
+            <div class="case">
+                <button id="CFilter" data-name="C"></button>
+                <p class="def">C++</p>
+            </div>
+            <div class="case">
+                <button id="htmlFilter" data-name="html"></button>
+                <p class="def">HTML</p>
+            </div>
+            <div class="case">
+                <button id="cssFilter" data-name="css"></button>
+                <p class="def">CSS</p>
+            </div>
+            <div class="case">
+                <button id="jsFilter" data-name="js"></button>
+                <p class="def">Javascript</p>
+            </div>
+        </div>
+        <div class="filterable_cards">
+            <div class="card">
+                <img src="Images/Luefn.png">
+                <div class="card_body">
+                    <h6 class="card_title">Création d’expériences sur un metaverse</h6>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/LPixelWar.png">
+                <div class="card_body">
+                    <h6 class="card_title">Création de la partie cliente d'un jeu en ligne</h6>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/LTowa.png">
+                <div class="card_body">
+                    <h6 class="card_title">Implémentation d’un jeu de plateau en java</h6>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/LGraphes.png">
+                <div class="card_body">
+                    <h6 class="card_title">Visualisation de graphe et construction de faisceaux d'arêtes</h6>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/LRéseau.png">
+                <div class="card_body">
+                    <h6 class="card_title">Installation d'un réseau virtuel</h6>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/LWeb.png">
+                <div class="card_body">
+                    <h6 class="card_title">Création d'un site web commercial</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="RetexUE">
+        <div class="RetexGeneral">
+            <h1 class="RetexTitle">Création d’expériences sur un metaverse</h1>
+            <p class="RetexDes">Depuis 2018, je participe a un programme nommé “Soutenir un créateur”. Ce programme mis en place par Epic Games, sur leur écosystème “Fortnite”, me permet de créer des jeux jouables par le monde entier tout en étant rémunéré.</p>    
+        </div>
+        <div class="RetexLanguages">
+            <div class="verse">
+                <button class="langImage"></button>
+            </div>
+            <div class="Uefn">
+                <button class="langImage"></button>
+            </div>
+            <div class="C">
+                <button class="langImage"></button>
+            </div>
+            <div class="Seul">
+                <button class="langImage"></button>
+            </div>
+            <p class="LanguageName"></p>
+        </div>
+        <div class="RetexAllImage">
+            <div class="RetexImages">
+                <!--First images-->
+                <div class="slideImage">
+                    <img src="Images/uefnExpo1.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/uefnExpo2.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/uefnExpo3.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/uefnExpo4.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="RetexText">
+            <h3>En résumé</h3>
+            <h5>Chronologie des tâches</h5>
+            <ol>
+                <li>1- Imagination d’une expérience</li>
+                <li>2- Demande d’avis de futurs utilisateurs</li>
+                <li>3- Imagination sur papier du jeu</li>
+                <li>4- Tests et débogage</li>
+                <li>5- Production du jeu</li>
+            </ol>
+            <h5>Points positifs</h5>
+            <ul>
+                <li>- Développement de la créativité</li>
+                <li>- Savoir repérer un besoin et répondre à une demande</li>
+                <li>- Apprentissage de nouveaux langages en autodidacte</li>
+                <li>- Savoir suivre un cahier des charges</li>
+                <li>- Savoir s'imposer et respecter des délais</li>
+            </ul>
+            <h5>Points à améliorer</h5>
+            <ul>
+                <li>- Communication pour faire connaitre mes créations</li>
+                <li>- Connaissance plus approfondie des logiciels</li>
+                <li>- Connaissance plus approfondie des langages</li>
+            </ul>
+        </div>
+        <div class="exitDiv">
+            <button class="exitRetex">Quitter</button>
+        </div>
+    </div>
+    <div class="popup" id="RetexPixel">
+        <div class="RetexGeneral">
+            <h1 class="RetexTitle">Création de la partie cliente d'un jeu en ligne</h1>
+            <p class="RetexDes">Le projet "Pixel IUT War" consistait à l'implémentation d'un jeu en ligne. Ce projet m'a permis de me familiariser avec le JavaScript ainsi les requêtes API. L'objectif final étant d'avoir un jeu jouable en temps réel avec tous les membres de ma formation.</p>    
+        </div>
+        <div class="RetexLanguages">
+            <div class="html">
+                <button class="langImage"></button>
+            </div>
+            <div class="css">
+                <button class="langImage"></button>
+            </div>
+            <div class="js">
+                <button class="langImage"></button>
+            </div>
+            <div class="Seul">
+                <button class="langImage"></button>
+            </div>
+            <p class="LanguageName"></p>
+        </div>
+        <div class="RetexAllImage">
+            <div class="RetexImages">
+                <!--First images-->
+                <div class="slideImage">
+                    <img src="Images/JsImage.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/gifPixel.gif"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/API.jpg"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/gifPixel.gif"/>
+                </div>
+            </div>
+        </div>
+        <div class="RetexText">
+            <h3>En résumé</h3>
+            <h5>Chronologie des tâches</h5>
+            <ol>
+                <li>1- Lecture et compréhension de la documentation de l'API</li>
+                <li>2- Imagination du design</li>
+                <li>3- Création du site statique</li>
+                <li>4- Implémentation de la communication avec le serveur</li>
+                <li>5- Tests</li>
+                <li>6- Redaction du ReadMe</li>
+            </ol>
+            <h5>Points positifs</h5>
+            <ul>
+                <li>- Développement de la créativité</li>
+                <li>- Connaissances accrues en développement Web</li>
+                <li>- Savoir lire et comprendre une documentation API</li>
+                <li>- Savoir faire des requêtes à un serveur en ligne</li>
+            </ul>
+            <h5>Points à améliorer</h5>
+            <ul>
+                <li>- Implémentations de bots pour poser des pixels</li>
+            </ul>
+
+        </div>
+        <div class="exitDiv">
+            <button class="exitRetex">Quitter</button>
+        </div>
+    </div>
+    <div class="popup" id="RetexTowa">
+        <div class="RetexGeneral">
+            <h1 class="RetexTitle">Implémentation d’un jeu de plateau en java</h1>
+            <p class="RetexDes">Le projet “Towa” est un jeu de plateau multijoueur développé en java. Ce jeu d’apparence simpliste m'a été la meilleure porte d’entrée vers le monde de la programmation et des Intelligences artificielles.</p>    
+        </div>
+        <div class="RetexLanguages">
+            <div class="java">
+                <button class="langImage"></button>
+            </div>
+            <div class="Seul">
+                <button class="langImage"></button>
+            </div>
+            <div class="Equipe">
+                <button class="langImage"></button>
+            </div>
+            <p class="LanguageName"></p>
+        </div>
+        <div class="RetexAllImage">
+            <div class="RetexImages">
+                <!--First images-->
+                <div class="slideImage">
+                    <img src="Images/TowaCode.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/TowaJeu.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/LTowa.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="RetexText">
+            <h3>En résumé</h3>
+            <h5>Chronologie des tâches</h5>
+            <ol>
+                <li>1- Implémentation des règles</li>
+                <li>2- Tests et débogage</li>
+                <li>3- Conception des IA</li>
+                <li>4- Implémentation des IA</li>
+                <li>5- Tests, débogage contre les autres groupes</li>
+            </ol>
+            <h5>Points positifs</h5>
+            <ul>
+                <li>- Maitrise approfondie en Java</li>
+                <li>- Savoir communiquer en équipe</li>
+                <li>- Compréhension et implémentations d'algorithmes d'IA</li>
+                <li>- Savoir suivre un cahier des charges</li>
+            </ul>
+            <h5>Points à améliorer</h5>
+            <ul>
+                <li>- Connaissance en développement objet au moment du projet</li>
+            </ul>
+        </div>
+        <div class="exitDiv">
+            <button class="exitRetex">Quitter</button>
+        </div>
+    </div>
+    <div class="popup" id="RetexGraphes">
+        <div class="RetexGeneral">
+            <h1 class="RetexTitle">Visualisation de graphe et construction de faisceaux d'arêtes</h1>
+            <p class="RetexDes">Le but de ce projet était de construire une application de visualisation de graphe. J'ai donc eu pour objectif d'implémenter les algorithmes de créations de graphes et d'Edge Bundling (regroupement des arêtes en faisceau).</p>    
+        </div>
+        <div class="RetexLanguages">
+            <div class="java">
+                <button class="langImage"></button>
+            </div>
+            <div class="Equipe">
+                <button class="langImage"></button>
+            </div>
+            <p class="LanguageName"></p>
+        </div>
+        <div class="RetexAllImage">
+            <div class="RetexImages">
+                <!--First images-->
+                <div class="slideImage">
+                    <img src="Images/CodeGraphes.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/CodeG1.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/CodeG2.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/LGraphes.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="RetexText">
+            <h3>En résumé</h3>
+            <h5>Chronologie des tâches</h5>
+            <ol>
+                <li>1- Implémentation des primitives de graphes</li>
+                <li>2- Implémentation de l'algorithme de Prim</li>
+                <li>3- Implémentation de l'algorithme d'Edge Bundle</li>
+                <li>4- Tests et débogage</li>
+                <li>5- Rendu du projet</li>
+            </ol>
+            <h5>Points positifs</h5>
+            <ul>
+                <li>- Connaissances accrues en développement objet</li>
+                <li>- Compréhension et implémentation d'algorithmes complexes</li>
+                <li>- Connaisances accrues en graphes et en mathématiques</li>
+            </ul>
+            <h5>Points à améliorer</h5>
+            <ul>
+                <li>- Temps passé à comprendre le cahier des charges</li>
+            </ul>
+
+        </div>
+        <div class="exitDiv">
+            <button class="exitRetex">Quitter</button>
+        </div>
+    </div>
+    <div class="popup" id="RetexRéseau">
+        <div class="RetexGeneral">
+            <h1 class="RetexTitle">Installation d'un réseau virtuel</h1>
+            <p class="RetexDes">Ce projet consistait à réaliser l’installation et la configuration de services réseaux. J'ai donc pu installer et configurer plusieurs applications sur des serveurs, ainsi que deux utilisateurs. Ce travail m'a permis d'approfondir mes connaissance en Bash Linux.</p>    
+        </div>
+        <div class="RetexLanguages">
+            <div class="bash">
+                <button class="langImage"></button>
+            </div>
+            <div class="Equipe">
+                <button class="langImage"></button>
+            </div>
+            <p class="LanguageName"></p>
+        </div>
+        <div class="RetexAllImage">
+            <div class="RetexImages">
+                <!--First images-->
+                <div class="slideImage">
+                    <img src="Images/RéseauCode.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/RéseauLobby.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/RéseauOffice.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/RéseauG.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="RetexText">
+            <h3>En résumé</h3>
+            <h5>Chronologie des tâches</h5>
+            <ol>
+                <li>1- Compréhension du cahier des charges</li>
+                <li>2- Implémentation du réseau</li>
+                <li>3- Tests et débogage</li>
+                <li>4- Rédaction d'un tutoriel en anglais pour comprendre le procédé du projet</li>
+                <li>5- Rendu du projet</li>
+            </ol>
+            <h5>Points positifs</h5>
+            <ul>
+                <li>- Connaissances accrues en architecture réseau</li>
+                <li>- Savoir configurer un réseau</li>
+                <li>- Savoir faire comprendre ses actions dans une langue étrangère</li>
+            </ul>
+            <h5>Points à améliorer</h5>
+            <ul>
+                <li>- Délégation des tâches dans le groupe</li>
+            </ul>
+
+        </div>
+        <div class="exitDiv">
+            <button class="exitRetex">Quitter</button>
+        </div>
+    </div>
+    <div class="popup" id="RetexWeb">
+        <div class="RetexGeneral">
+            <h1 class="RetexTitle">Création d'un site web commercial</h1>
+            <p class="RetexDes">Ce projet consistait en la création d'un site web ayant une thématique origiale. Je suis parti dans l'optique de faire un site de vente d'équipements de sport futuristes. Ce projet m'a premis de comprendre le fonctionnement du développement Web.
+            </p>    
+        </div>
+        <div class="RetexLanguages">
+            <div class="html">
+                <button class="langImage"></button>
+            </div>
+            <div class="css">
+                <button class="langImage"></button>
+            </div>
+            <div class="Seul">
+                <button class="langImage"></button>
+            </div>
+            <p class="LanguageName"></p>
+        </div>
+        <div class="RetexAllImage">
+            <div class="RetexImages">
+                <!--First images-->
+                <div class="slideImage">
+                    <img src="Images/WebCode.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/WebPage.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/WebCo.png"/>
+                </div>
+                <div class="slideImage">
+                    <img src="Images/Web.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="RetexText">
+            <h3>En résumé</h3>
+            <h5>Chronologie des tâches</h5>
+            <ol>
+                <li>1- Compréhension du sujet</li>
+                <li>2- Conception du site</li>
+                <li>3- Création du site</li>
+                <li>4- Tests</li>
+                <li>5- Rendu du projet</li>
+            </ol>
+            <h5>Points positifs</h5>
+            <ul>
+                <li>- Bases de la programmation Web acquises</li>
+                <li>- Développement de l'imagination</li>
+                <li>- Compréhension du fonctionnement d'un site de E-Commerce</li>
+            </ul>
+            <h5>Points à améliorer</h5>
+            <ul>
+                <li>- Aspect statique du site</li>
+                <li>- Design du site</li>
+            </ul>
+
+        </div>
+        <div class="exitDiv">
+            <button class="exitRetex">Quitter</button>
+        </div>
+    </div>
+    <script src="select.js"></script>
+</body>
+</html>

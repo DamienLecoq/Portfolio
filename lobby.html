@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+    <div class="header">
+        <div class="top-nav">
+            <div id="Title">
+                <h1 id="Name">Damien LECOQ</h1>
+                <h1 id="Portfolio">Portfolio</h1>
+            </div>
+            <ul>
+                <li><a href="lobby.html">ACCEUIL</a></li>
+                <li><a href="select.html">PROJETS</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">PLUS SUR MOI</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="slide">
+            <div class="item" style="background-image:url(./Images/Towa.png)">
+                <div class="content">
+                    <div class="name">Implémentation d’un jeu de plateau en java</div>
+                    <div class="des">Le projet “Towa” est un jeu de plateau multijoueur développé en java. Ce jeu d’apparence simpliste m'a été la meilleure porte d’entrée vers le monde de la programmation et des Intelligences artificielles.</div>
+                    <button id="boutonTowa" class="seeMore" onclick="window.location.href = 'select.html'">Voir plus</button>
+                    <div class="language">
+                        <div class="Java">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Seul">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Equipe">
+                            <button class="langImage"></button>
+                        </div>
+                        <p class="LanguageName"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(Images/neon2.png)">
+                <div class="content">
+                    <div class="name">Damien LECOQ</div>
+                    <div class="name">Portfolio</div>
+                    <div class="des">Etudiant de première année en IUT informatique</div>
+                    <button id="boutonPres" class="seeMore">Voir plus</button>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(./Images/uefn3.png)">
+                <div class="content">
+                    <div class="name">Création d’expériences sur un metaverse</div>
+                    <div class="des">Depuis 2018, je participe a un programme nommé “Soutenir un créateur”. Ce programme mis en place par Epic Games, sur leur écosystème “Fortnite”, me permet de créer des jeux jouables par le monde entier tout en étant rémunéré.</div>
+                    <button id="boutonUe" class="seeMore" onclick="window.location.href = 'select.html'">Voir plus</button>
+                    <div class="language">
+                        <div class="Verse">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Uefn">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="C">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Seul">
+                            <button class="langImage"></button>
+                        </div>
+                        <p class="LanguageName"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(./Images/PixelWar.png)">
+                <div class="content">
+                    <div class="name">Création de la partie cliente d'un jeu en ligne</div>
+                    <div class="des">Le projet "Pixel IUT War" consistait à l'implémentation d'un jeu en ligne. Ce projet m'a permis de me familiariser avec le JavaScript ainsi les requêtes API. L'objectif final étant d'avoir un jeu jouable en temps réel avec tous les membres de ma formation.</div>
+                    <button id="boutonPixel" class="seeMore" onclick="window.location.href = 'select.html'">Voir plus</button>
+                    <div class="language">
+                        <div class="Html">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Css">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Js">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Seul">
+                            <button class="langImage"></button>
+                        </div>
+                        <p class="LanguageName"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" style="background-image:url(./Images/Graphes.png)">
+                <div class="content">
+                    <div class="name">Visualisation de graphe et construction de faisceaux d'arêtes</div>
+                    <div class="des">Le but de ce projet était de construire une application de visualisation de graphe. J'ai donc eu pour objectif d'implémenter les algorithmes de créations de graphes et d'Edge Bundling (regroupement des arêtes en faisceau).</div>
+                    <button id="boutonGraphes" class="seeMore" onclick="window.location.href = 'select.html'">Voir plus</button>
+                    <div class="language">
+                        <div class="Java">
+                            <button class="langImage"></button>
+                        </div>
+                        <div class="Equipe">
+                            <button class="langImage"></button>
+                        </div>
+                        <p class="LanguageName"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+
+        </div>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

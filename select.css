@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-y: hidden;
+    background: url("Images/neon2.png");
+}
+
+
+.header{
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    padding-left: 6%;
+    padding-right: 8%;
+    z-index: 2;
+}
+
+.top-nav{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 1px;
+}
+
+#Title{
+    display: flex;
+    flex-direction: row;
+    color: white;
+	-webkit-text-stroke: 0 #F8F8F8;
+	text-shadow: 0px 1px 4px #23430C;
+}
+
+#Portfolio{
+    margin-left: 2%;
+    
+}
+.top-nav ul{
+    border-top: 3px solid white;
+    width: 35%;
+}
+  
+.top-nav ul li{
+    list-style: none;
+    background: none;
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 10px;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    --hover: #b81fff;
+}
+
+.top-nav ul li:hover,
+.top-nav ul li:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+
+@-webkit-keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+.top-nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.container{
+    position: relative;
+    max-width: 1350px;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+
+.retexActive{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.filter_buttons{
+    position: relative;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+}
+
+button {
+    margin: 20px;
+    width: 60px;
+    position: relative;
+    height: 60px;
+    border-radius: 100px;
+    border: none;
+    font-weight: 600;
+    background-size: cover;
+}
+
+#soloFilter{
+    background-image: url("Images/Seul.png");
+}
+#teamFilter{
+    background-image: url("Images/Equipe.png");
+}
+#javaFilter{
+    background-image: url("Images/Java.png");
+    background-position: 50%;
+}
+#bashFilter{
+    background-image: url("Images/Bash.png");
+}
+#verseFilter{
+    background-image: url("Images/Verse.png");
+}
+#uefnFilter{
+    background-image: url("Images/UE.png");
+}
+#CFilter{
+    background-image: url("Images/C++.png");
+}
+#htmlFilter{
+    background-image: url("Images/Html.png");
+}
+#cssFilter{
+    background-image: url("Images/Css.png");
+}
+#jsFilter{
+    background-image: url("Images/Js.png");
+}
+button:hover +.def{
+    display: block;
+    margin-top: 15px;
+}
+
+.case{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.def{
+    position: absolute;
+    top: 90%;
+    display: none;
+}
+
+.filterable_cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 565px;
+    overflow-y: scroll;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.card {
+    flex-grow: 1;
+    max-width: 300px;
+    flex-basis: 250px;
+    background-color: #FEFEFA;
+    padding: 3px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card.hide{
+    display: none;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card_body {
+    padding: 15px 20px 20px;
+}
+
+.card_title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #333;
+}
+
+.popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    background-size: cover;
+}
+
+.popup.activate{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.RetexTitle{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: animate 1.5s ease-in-out 1 forwards;
+}
+
+.RetexGeneral{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 550px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+}
+
+.RetexLanguages{
+    position: absolute;
+    top: 65%;
+    left: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:500;
+    
+}
+
+.langImage {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    position: relative;
+    height: 90px;
+    border-radius: 50%;
+    border: none;
+    font-weight: 600;
+    background-size: cover;   
+}
+
+.langImage::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -5.5px;
+    top: -5.5px;
+    border-radius: 50%;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(90deg, #5f03f4, #f441a5, #b81fff, #5f03f4);
+    filter: blur(15px);
+}
+
+.Equipe .langImage::after,
+.Seul .langImage::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -5.5px;
+    top: -5.5px;
+    border-radius: 50%;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(90deg, #e5e0c7, #5ad5ca, #19babc, #2c7c92);
+    filter: blur(15px);
+}
+
+.langImage:hover::after {
+    animation: rotcirclegr 1s linear infinite;
+}
+
+@keyframes rotcirclegr {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.LanguageName{
+    position: absolute;
+    transform: translate(0, 350%);
+    color: white;
+}
+
+.exitDiv{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    top: 0;
+    left: 44%;
+}
+
+.exitRetex {
+    height: 55px;
+    width: 175px;
+    border-radius: 50px;
+    border: none;
+    color: transparent;
+    text-shadow: 0 0 0 rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: linear-gradient(90deg, #5f03f4, #f441a5, #b81fff, #5f03f4);
+    background-size: 400%;
+    font-family: "Montserrat", sans-serif;
+}
+  
+.exitRetex:hover {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(155, 0, 194, 0.9);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(155, 0, 194, 0.9);
+    box-shadow: 0px 0px 15px 0px rgba(155, 0, 194, 0.9);
+    animation: buttonAnimate 8s ease infinite;
+    transition: box-shadow, 0.4s;
+    border: none;
+    font-size: 19px;
+    transform: scale(1.05, 1.05);
+    background: linear-gradient(90deg, #5f03f4, #f441a5, #b81fff, #5f03f4);
+    background-size: 400%;
+}
+
+@keyframes buttonAnimate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.RetexAllImage{
+    display: flex;
+    height: 250px;    
+    justify-content: end;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.RetexImages::before,
+.RetexImages::after{
+    background: linear-gradient(to right, rgba(255,255,255,0.2)0%,
+    rgba(255,255,255,0)100%);
+    content: '';
+    height: 250px;
+    position: absolute;
+    width: 2%;
+    z-index: 30 ;
+}
+
+.RetexImages::after{
+    right: 2.7%;
+    top: 5%;
+    transform: rotateZ(180deg);
+}
+
+.RetexImages{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 34%;
+    width: calc(250px * 8);
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slideImage{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    perspective: 200px;
+    animation: scroll 30s linear infinite;
+}
+
+.slideImage img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    max-height: 100%;
+    transition: transform 0.5s;
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+}
+
+@keyframes scroll{
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slideImage img:hover{
+    transform: translateZ(20px);
+}
+
+.RetexText{
+    position: absolute;
+    left: 65.2%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 32%;
+    max-height: 60%;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.verse .langImage{
+    background-image: url("Images/Verse.png");
+}
+
+.Uefn .langImage{
+    background-image: url("Images/UE.png");
+}
+
+.C .langImage{
+    background-image: url("Images/C++.png");
+}
+
+.html .langImage{
+    background-image: url("Images/Html.png");
+}
+
+.css .langImage{
+    background-image: url("Images/Css.png");
+}
+
+.js .langImage{
+    background-image: url("Images/Js.png");
+}
+
+.java .langImage{
+    background-image: url("Images/Java.png");
+    background-position: 50%;
+}
+
+.bash .langImage{
+    background-image: url("Images/Bash.png");
+}
+
+.Equipe .langImage{
+    background-image: url("Images/Equipe.png");
+}
+
+.Seul .langImage{
+    background-image: url("Images/Seul.png");
+}
+
+.RetexText p{
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.RetexText h3{
+    padding: 10px;
+    font-weight: 300px;
+    text-align: center;
+}
+
+.RetexText ol,
+.RetexText ul{
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 17px;
+}
+
+#RetexUE{
+    background-image: url("Images/uefn3.png");
+}
+
+#RetexPixel{
+    background-image: url("Images/PixelWar.png");
+
+}
+
+#RetexTowa{
+    background-image: url("Images/Towa.png");
+
+}
+
+#RetexGraphes{
+    background-image: url("Images/Graphes.png");
+}
+
+#RetexRéseau{
+    background-image: url("Images/Réseau.png");
+}
+
+#RetexWeb{
+    background-image: url("Images/Web.png");
+}
