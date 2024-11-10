@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin-top: 120px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            font-size: smaller;
+            top: 0;
+        }
+
+        footer{
+            background: #333;
+            color: #fff;
+            width: 100%;
+            font-size: small;
+            bottom: 0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #about img{
+            width: 15%;
+            height: auto;
+        }
+
+        .portfolio-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .portfolio-item img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .portfolio-item p {
+            text-align: justify;
+            max-width: 60%;
+        }
+
+        .chrono{
+            margin-bottom: 50px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            margin: 0.5rem 0;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+        }
+
+        form button {
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #555;
+        }
+
+        .infos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        .infos div{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 45%;
+            list-style: none;
+            text-align: left;
+        }
+        
+
+        .infos div:nth-child(2) ul{
+            list-style: decimal;
+        }
+
+        @media (max-width: 550px) { 
+            #about img{
+                width: 30%;
+            }
+            .portfolio-item img {
+                max-width: 70%;
+            }
+        }
+        
+        
+    </style>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#about">A propos de moi</a></li>
+            <li><a href="#portfolio">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Damien Lecoq - Portfolio</h1>
+</header>
+<body>
+    <section id="about">
+        <img src="images/PP.png" alt="Profile Picture"/>
+        <p>Salut !<br>Je suis Damien Lecoq, un développeur junior bordelais. Je suis actuellement en deuxième année de BUT informatique à l'<a href="https://www.iut.u-bordeaux.fr/general/les-sites-geographiques/site-gradignan/">IUT de Gradignan</a>.</p>
+    </section>
+    <section id="portfolio">
+        <h2>Projets</h2>
+        <div class="portfolio-item">
+            <img src="images/Eco.png" alt="Projet Ecobreath">
+            <h1>Création d’une application de gestion des émissions de CO2</h1>
+            <p>À la suite d'une demande d'une entreprise fictive, notre équipe de jeunes développeurs de l'IUT de Gradignan a développé une application pour visionner les émissions de CO2 de celle-ci. Nous avons utilisé toutes nos connaissances en C#, Python et SQL.</p>
+            <div class="infos">
+                <div>
+                    <h3>Points positifs</h3>
+                    <ul>
+                        <li>Utilisation du cycle en V</li>
+                        <li>Travail d'équipe</li>
+                        <li>Large variété de langages utilisés</li>
+                        <li>Partage des tâches</li>
+                        <li>Temps de réflexion sur le projet et les spécifications</li>
+                    </ul>
+                </div>
+                <div class="chrono">
+                    <h3>Chronologie des tâches</h3>
+                    <ul>
+                        <li>Comprendre les spécifications</li>
+                        <li>Création de diagrammes d’organisation</li>
+                        <li>Questionner le client régulièrement</li>
+                        <li>Production</li>
+                        <li>Présentation du produit au client</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/Pixel.png" alt="Project Pixel IUT War">
+            <h1>Création de la partie cliente d’un jeu en ligne</h1>
+            <p>Le projet 'Pixel IUT War' consistait à l'implémentation d'un jeu en ligne. Ce projet m'a permis de me familiariser avec le JavaScript ainsi les requêtes API. L'objectif final étant d'avoir un jeu jouable en temps réel avec tous les membres de ma formation.</p>
+            <div class="infos">
+                <div>
+                    <h3>Points positifs</h3>
+                    <ul>
+                        <li>Développement de la créativité</li>
+                        <li>Connaissances accrues en développement Web</li>
+                        <li>Comprendre une documentation API</li>
+                        <li>Communication avec un serveur</li>
+                        <li>Faire des requêtes vers un serveur en ligne</li>
+                    </ul>
+                </div>
+                <div class="chrono">
+                    <h3>Chronologie des tâches</h3>
+                    <ul>
+                        <li>Comprendre la documentation API</li>
+                        <li>Conception et création du site statique</li>
+                        <li>Implémentation de la communication avec le serveur</li>
+                        <li>Tests</li>
+                        <li>Rédaction du ReadMe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/Ftn.png" alt="Projet Unreal Engine">
+            <h1>Création d’expériences sur un metaverse</h1>
+            <p>Depuis 2018, je participe à un programme nommé « Soutenir un créateur ». Ce programme, mis en place par Epic Games sur leur écosystème « Fortnite », me permet de créer des jeux jouables par le monde entier tout en étant rémunéré.</p>
+            <div class="infos">
+                <div>
+                    <h3>Points positifs</h3>
+                    <ul>
+                        <li>Développement de la créativité</li>
+                        <li>Identifier un besoin et y répondre</li>
+                        <li>Apprentissage autodidacte de nouveaux langages</li>
+                        <li>Suivre un cahier des charges</li>
+                        <li>Savoir respecter des délais</li>
+                    </ul>
+                </div>
+                <div class="chrono">
+                    <h3>Chronologie des tâches</h3>
+                    <ul>
+                        <li>Imaginer une expérience</li>
+                        <li>Demander l'avis de futurs utilisateurs</li>
+                        <li>Imaginer le jeu sur papier</li>
+                        <li>Production du jeu</li>
+                        <li>Tests et débogage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/RaveOn.png" alt="Project Raveon">
+            <h1>Développement et maintenance du site web d'un artiste</h1>
+            <p>Raveon est un DJ et compositeur de musique techno rave. J\'ai développé son site web, le mettant à jour selon ses demandes.</p>
+            <div class="infos">
+                <div>
+                    <h3>Points positifs</h3>
+                    <ul>
+                        <li>Utilisation de méthodes Agile</li>
+                        <li>Gestion du site Web</li>
+                        <li>Approfondir mes compétences de design responsive</li>
+                        <li>Comprendre et interpréter les besoins du client</li>
+                        <li>Suivre un cahier des charges</li>
+                    </ul>
+                </div>
+                <div class="chrono">
+                    <h3>Chronologie des tâches</h3>
+                    <ul>
+                        <li>Comprendre le besoin</li>
+                        <li>Entretien avec le client</li>
+                        <li>Production</li>
+                        <li>Présentation du produit en cours au client</li>
+                        <li>Modification du produit (répéter autant de fois que nécessaire)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="contact">
+        <h2>Contactez moi</h2>
+        <div id="formulairecontact">
+            <form id="form" onsubmit="sendMail(event)">
+                <p>
+                    <label for="nom">Prénom et nom: </label><span class="required">*</span>
+                    <input type="text" id="name" name="Prénom & NOM" placeholder="Prénom & Nom" required autofocus />
+                    <br/>
+                    <label for="email">Adresse mail: </label><span class="required">*</span>
+                    <input type="email" id="email" name="email" placeholder="adresse@example.com" required />
+                    <br/>
+                    <label for="message">Message: <span class="required">*</span></label>
+                    <textarea id="message" name="Message" required></textarea>
+                </p>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p><i>Une nouvelle version de ce portfolio sera bientôt disponible, avec un design et une richesse graphique plus élaborée.</i></p>
+    </footer>
+
+
+    <script type="text/javascript">
+        function sendMail(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const telephone = document.getElementById('telephone').value || "Non renseigné";
+            const raison = document.getElementById('raison').value;
+            const message = document.getElementById('message').value;
+
+            const mailtoLink = `mailto:damienlecoq1@gmail.com?subject=${encodeURIComponent(raison)}&body=${encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\nTéléphone: " + telephone + "\n\nMessage:\n" + message)}`;
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
