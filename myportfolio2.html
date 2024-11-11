@@ -26,6 +26,7 @@
             width: 100%;
             font-size: smaller;
             top: 0;
+            z-index: 1000;
         }
 
         footer{
@@ -76,6 +77,7 @@
         .portfolio-item img {
             max-width: 50%;
             height: auto;
+            filter: drop-shadow(0 0 0.75rem black);
         }
 
         .portfolio-item p {
@@ -123,6 +125,7 @@
             justify-content: center;
             align-items: flex-start;
             gap: 50px;
+            border-bottom: solid 2px black;
         }
 
         .infos div{
@@ -143,6 +146,12 @@
         @media (max-width: 550px) { 
             #about img{
                 width: 30%;
+            }
+            .portfolio-item p{
+                max-width: 95%;
+            }
+            .infos div{
+                width: 80%;
             }
             .portfolio-item img {
                 max-width: 70%;
@@ -168,64 +177,81 @@
         <p>Salut !<br>Je suis Damien Lecoq, un développeur junior bordelais. Je suis actuellement en deuxième année de BUT informatique à l'<a href="https://www.iut.u-bordeaux.fr/general/les-sites-geographiques/site-gradignan/">IUT de Gradignan</a>.</p>
     </section>
     <section id="portfolio">
-        <h2>Projets</h2>
+        <h2>Projets réalisés</h2>
         <div class="portfolio-item">
-            <img src="images/Eco.png" alt="Projet Ecobreath">
             <h1>Création d’une application de gestion des émissions de CO2</h1>
-            <p>À la suite d'une demande d'une entreprise fictive, notre équipe de jeunes développeurs de l'IUT de Gradignan a développé une application pour visionner les émissions de CO2 de celle-ci. Nous avons utilisé toutes nos connaissances en C#, Python et SQL.</p>
+            <p>&nbsp;</p>
+            <img src="images/Eco.png" alt="Projet Ecobreath">
+            <p>&nbsp;</p>
+            <p>A la demande d'une entreprise imaginaire, notre équipe de jeunes développeurs de l'IUT de Gradignan a développé une application pour visualiser en continue ses émissions de CO2 en fonction de plusieurs paramètres. 
+                Nous avons utilisé toutes nos connaissances en <b>C#</b>, <b>Python</b> et <b>SQL</b> pour réaliser une application <i>standalone</i> avec une base de données, et une interface de restitution.</p>
+            <p>Nous étions une équipe de <b>cinq développeurs</b> organisée par compétences techniques. J'ai travaillé principalement sur l'interface graphique et les connecteurs en Python pour 
+                intéragir avec la base de données.
+                <br>Le projet a nécessité <b>deux semaines</b> complètes de travail.</p>
+                <p>&nbsp;</p>
             <div class="infos">
                 <div>
                     <h3>Points positifs</h3>
                     <ul>
-                        <li>Utilisation du cycle en V</li>
+                        <li>Méthode <b>cycle en V</b></li>
                         <li>Travail d'équipe</li>
                         <li>Large variété de langages utilisés</li>
-                        <li>Partage des tâches</li>
-                        <li>Temps de réflexion sur le projet et les spécifications</li>
+                        <li>Organisation et partage des tâches</li>
+                        <li>Charge importante en <b>conception et organisation</b></li>
                     </ul>
                 </div>
                 <div class="chrono">
                     <h3>Chronologie des tâches</h3>
                     <ul>
-                        <li>Comprendre les spécifications</li>
+                        <li>Compréhension du besoin et des spécifications</li>
                         <li>Création de diagrammes d’organisation</li>
-                        <li>Questionner le client régulièrement</li>
-                        <li>Production</li>
-                        <li>Présentation du produit au client</li>
+                        <li>Echanges fréquents avec le client</li>
+                        <li><b>Développement et tests</b></li>
+                        <li>Présentation du produit final au client</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="portfolio-item">
-            <img src="images/Pixel.png" alt="Project Pixel IUT War">
             <h1>Création de la partie cliente d’un jeu en ligne</h1>
-            <p>Le projet 'Pixel IUT War' consistait à l'implémentation d'un jeu en ligne. Ce projet m'a permis de me familiariser avec le JavaScript ainsi les requêtes API. L'objectif final étant d'avoir un jeu jouable en temps réel avec tous les membres de ma formation.</p>
+            <p>&nbsp;</p>
+            <img src="images/Pixel.png" alt="Project Pixel IUT War">
+            <p>&nbsp;</p>
+            <p>Créé en 2017, le jeu "Pixel War" permet à plusieurs joueurs de créer une fresque virtuelle partagée sur un site Web. 
+            Sur cette même idée, l'IUT de Gradignan a créé le projet 'Pixel IUT War'. 
+            Ce projet m'a permis de me familiariser avec le <b>JavaScript</b> ainsi les que requêtes <b>API REST</b> pour gérer une fresque disponible sur un serveur centralisé.
+            Chaque étudiant a travaillé en autonomie sur son projet d'implémentation. 
+            Pendant deux mois, nous étions tous challengés pour atteindre l'objectif final qui était de créer une interface jouable, ludique et offrant le plus de fonctionnalités possibles.
+            </p>
+            <p>&nbsp;</p>
             <div class="infos">
                 <div>
                     <h3>Points positifs</h3>
                     <ul>
                         <li>Développement de la créativité</li>
-                        <li>Connaissances accrues en développement Web</li>
-                        <li>Comprendre une documentation API</li>
-                        <li>Communication avec un serveur</li>
-                        <li>Faire des requêtes vers un serveur en ligne</li>
+                        <li>Connaissances approfondies en développement Web</li>
+                        <li>Comprendre une documentation API REST</li>
+                        <li>Communication en Javascript avec un serveur</li>
+                        <li>Implémenter des requêtes pour intéragir avec un serveur en ligne</li>
                     </ul>
                 </div>
                 <div class="chrono">
                     <h3>Chronologie des tâches</h3>
                     <ul>
                         <li>Comprendre la documentation API</li>
-                        <li>Conception et création du site statique</li>
+                        <li>Conception et création d'une application Web statique</li>
                         <li>Implémentation de la communication avec le serveur</li>
                         <li>Tests</li>
-                        <li>Rédaction du ReadMe</li>
+                        <li>Rédaction de la documentation dans un ReadMe</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="portfolio-item">
-            <img src="images/Ftn.png" alt="Projet Unreal Engine">
             <h1>Création d’expériences sur un metaverse</h1>
+            <p>&nbsp;</p>
+            <img src="images/Ftn.png" alt="Projet Unreal Engine">
+            <p>&nbsp;</p>
             <p>Depuis 2018, je participe à un programme nommé « Soutenir un créateur ». Ce programme, mis en place par Epic Games sur leur écosystème « Fortnite », me permet de créer des jeux jouables par le monde entier tout en étant rémunéré.</p>
             <div class="infos">
                 <div>
@@ -251,8 +277,10 @@
             </div>
         </div>
         <div class="portfolio-item">
-            <img src="images/RaveOn.png" alt="Project Raveon">
             <h1>Développement et maintenance du site web d'un artiste</h1>
+            <p>&nbsp;</p>
+            <img src="images/RaveOn.png" alt="Project Raveon">
+            <p>&nbsp;</p>
             <p>Raveon est un DJ et compositeur de musique techno rave. J\'ai développé son site web, le mettant à jour selon ses demandes.</p>
             <div class="infos">
                 <div>
@@ -284,8 +312,7 @@
         <div id="formulairecontact">
             <form id="form" onsubmit="sendMail(event)">
                 <p>
-                    <label for="nom">Prénom et nom: </label><span class="required">*</span>
-                    <input type="text" id="name" name="Prénom & NOM" placeholder="Prénom & Nom" required autofocus />
+                    <input type="text" id="name" name="Prénom & NOM" placeholder="Prénom & Nom" required/>
                     <br/>
                     <label for="email">Adresse mail: </label><span class="required">*</span>
                     <input type="email" id="email" name="email" placeholder="adresse@example.com" required />
@@ -309,13 +336,13 @@
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const telephone = document.getElementById('telephone').value || "Non renseigné";
-            const raison = document.getElementById('raison').value;
             const message = document.getElementById('message').value;
 
-            const mailtoLink = `mailto:damienlecoq1@gmail.com?subject=${encodeURIComponent(raison)}&body=${encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\nTéléphone: " + telephone + "\n\nMessage:\n" + message)}`;
+            const mailtoLink = `mailto:damienlecoq1@gmail.com?subject=&body=${encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
 
             window.location.href = mailtoLink;
+
+            window.scrollTo(0, 0);
         }
     </script>
 </body>
