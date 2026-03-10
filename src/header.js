@@ -1,41 +1,66 @@
-const menuToggle = document.getElementById('menu-toggle');
+/* =====================================================
+   header.js – Navigation, smooth scroll, scrollspy
+   ===================================================== */
+
+const navbar     = document.getElementById('NavBar');
 const mobileMenu = document.getElementById('mobile-menu');
-const burgerIcon1 = document.getElementById('burger-icon-1');
-const burgerIcon2 = document.getElementById('burger-icon-2');
-const burgerIcon3 = document.getElementById('burger-icon-3');
+const menuToggle = document.getElementById('menu-toggle');
+const burgerIcon = document.getElementById('burger-icon');
 
-menuToggle.addEventListener('click', () => {
-    burgerIcon1.classList.toggle('rotate-45');
-    burgerIcon1.classList.toggle('translate-y-2');
-    burgerIcon3.classList.toggle('rotate-[-45deg]');
-    burgerIcon3.classList.toggle('translate-y-[-4px]');
-    burgerIcon2.classList.toggle('opacity-0');
-    
-    mobileMenu.classList.toggle('hidden');
-});
-
-let lastTopScroll = 0;
-const navbar = document.getElementById("NavBar");
-window.addEventListener("scroll", function(){
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastTopScroll){
-    navbar.style.top="-60px";
+// ── Helpers menu mobile ─────────────────────────────────
+function openMenu()  {
+    mobileMenu.classList.remove('hidden');
+    burgerIcon.classList.replace('fa-bars', 'fa-xmark');
+}
+function closeMenu() {
     mobileMenu.classList.add('hidden');
-    } else {
-    navbar.style.top="0";
-    }
-    lastTopScroll = scrollTop;
-})
+    burgerIcon.classList.replace('fa-xmark', 'fa-bars');
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.carousel img');
-    let currentIndex = 0;
+// ── Smooth scroll via event delegation ─────────────────
+document.addEventListener('click', e => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
 
-    function showNextImage() {
-        images[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add('active');
-    }
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (!target) return;
 
-    setInterval(showNextImage, 4500);
+    e.preventDefault();
+    closeMenu(); // fermer avant de mesurer offsetHeight (le menu est dans le header fixe)
+
+    const offset = navbar.offsetHeight + 8;
+    const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
 });
+
+// ── Mobile menu toggle ─────────────────────────────────
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.contains('hidden') ? openMenu() : closeMenu();
+});
+
+// ── Navbar hide/show on scroll ─────────────────────────
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    navbar.style.top = scrollY > lastScrollY && scrollY > 60 ? `-${navbar.offsetHeight}px` : '0';
+    if (scrollY > lastScrollY) closeMenu();
+    lastScrollY = scrollY;
+}, { passive: true });
+
+// ── Scrollspy (appelé par app.js après renderNav) ──────
+function initScrollspy() {
+    const navLinks = document.querySelectorAll('a.nav-link[href^="#"]');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+                link.classList.toggle('nav-active', link.getAttribute('href') === `#${id}`);
+            });
+        });
+    }, { threshold: 0, rootMargin: '-45% 0px -45% 0px' });
+
+    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+}
